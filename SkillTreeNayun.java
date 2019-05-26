@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-class Solution {
+class SkillTreeNayun {
     public int solution(String skill, String[] skill_trees) {
          String[] skill_arr = skill.split("");	    
 	     	      	                
