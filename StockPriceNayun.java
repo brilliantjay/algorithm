@@ -1,5 +1,3 @@
-package programmers_level2_2;
-
 import java.util.ArrayList;
 import java.util.List;
 
