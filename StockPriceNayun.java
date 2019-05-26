@@ -3,7 +3,7 @@ package programmers_level2_2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StockTest {
+public class Stock {
 	public static void main(String[] args) {
 		//int[] prices = {1,2,3,2,3,1,2,3,2,3,1,2,3,2,3};
 		//int[] prices = {1,2,3,2,3};
