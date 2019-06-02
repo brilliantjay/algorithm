@@ -1,9 +1,21 @@
 import java.util.LinkedList;
-class Country124Nayun {
-  private static int diff = 0;
-  private static int cnt = 0;
-  private static String str = "";
-   private String rePermutation(int[] arr, int r, LinkedList<Integer> rePerArr) {		
+
+public class  {
+	
+	private static int diff = 0;
+	private static int cnt = 0;
+	private static String str = "";	
+
+	public static void main(String[] args) {
+		int[] arr = {13,14,15};
+		
+		for(int i=0;i<arr.length;i++) {
+			cnt = 0;
+			System.out.println(solution(arr[i]));
+		}
+	}	
+	
+	private static String rePermutation(int[] arr, int r, LinkedList<Integer> rePerArr) {		
         if(rePerArr.size() == r){
             for(int i : rePerArr){               
             	str += i +"";
@@ -32,9 +44,8 @@ class Country124Nayun {
        return str;
     }
 		
-	public String solution(int n) {	
+	public static String solution(int n) {	
 		
-        cnt = 0;
 		int total = 0;		
 		int idx = 1;		
 		int subNum = 0;
@@ -61,7 +72,7 @@ class Country124Nayun {
 			str = rePermutation(arr, idx, rePerArr);					
 			
 		}else {
-			cnt = 0;
+			int cnt = 0;
 			for(int i=0;i<arr.length;i++) {
 				cnt ++;
 				if(cnt == n) {
@@ -72,4 +83,5 @@ class Country124Nayun {
 		
 		return str;
 	}
+
 }
