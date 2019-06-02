@@ -13,7 +13,7 @@ public class TopSeungho {
 		int[] answer = new int[heightLen];
 		for(int i=0; i<heightLen; i++) {
 			int prevIdx = i-1;
-			while(prevIdx >= 0) {
+  			while(prevIdx >= 0) {
 				if(heights[prevIdx] > heights[i]) {
 					answer[i] = prevIdx+1;
 					break;

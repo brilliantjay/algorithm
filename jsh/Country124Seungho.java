@@ -59,7 +59,7 @@ public class Country124Seungho {
 					break;
 				} else if(50 == (int)chars[j]) {
 					chars[j] = 52;
-					break;
+					break; 
 				} else {
 					chars[j] = 49;
 				}
