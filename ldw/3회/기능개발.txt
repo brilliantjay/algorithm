@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int[] progresses, int[] speeds) {
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        int [] answer = {};
+        int releaseDay = 0;
+        
+         if ((100 - progresses[0]) % speeds[0] == 0 ){
+                releaseDay = (100 - progresses[0]) / speeds[0]; 
+            } else {
+                releaseDay = (100 - progresses[0]) / speeds[0] + 1;
+            } 
+        
+        int numberOfRelease = 1;
+        
+        for (int i = 1; i < progresses.length; i++) {
+            int tempReleaseDay = 0;
+            if ((100 - progresses[i]) % speeds[i] == 0 ){
+                tempReleaseDay = (100 - progresses[i]) / speeds[i]; 
+            } else {
+                tempReleaseDay = (100 - progresses[i]) / speeds[i] + 1;
+            } 
+            
+            if (tempReleaseDay <= releaseDay) {
+                numberOfRelease++;
+            } else {
+                arrayList.add(numberOfRelease);
+                releaseDay = tempReleaseDay;
+                numberOfRelease = 1;
+            }
+            
+            if (i == progresses.length - 1) {
+                arrayList.add(numberOfRelease);
+            }
+        }
+        answer = new int[arrayList.size()];
+        for (int j = 0; j < arrayList.size(); j++) {
+            System.out.println(arrayList.get(j));
+            answer[j] = arrayList.get(j);
+        }
+        return answer;
+    }
+}
